@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <section class="container">
+        <div class="img-container">
+            <div class="song-img-container">
+                <img src="https://i1.sndcdn.com/artworks-5Gk9kjmBP8wh1hPz-Bb7vmg-t500x500.jpg">
+            </div>
+            <div class="cd-img-container">
+                    <img src="https://images.freeimages.com/fic/images/icons/865/extreme_media/512/blank_gray.png?fmt=webp&w=500%22" alt="cd-img">
+            </div>
+        </div>
+        <div class="title-container">
+            <h1 class="song-title">	Alone, Pt. II</h1>
+            <h2 class="artist-name">Alan Walker & Ava Max</h2>
+        </div>
+        <div class="progress-bar-container">
+            <div class="counter-container">
+                <span id="count" class="measure-count:">00:00</span>
+                <span class="duration">03:35</span>
+            </div>
+            <div class="progress">
+                <div class="progress-container">
+                    <span class="colored-bar"></span>
+                    <span class="circle"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons-container">
+
+             <!-- Audio Player -->
+            <audio id="audioPlayer" src="https://audio.jukehost.co.uk/F8jQDlowub6sVJQyqyH0LAJXTqKN2Unu" controls>
+                Your browser does not support the audio element.
+            </audio>
+            
+            <!-- prev btn -->
+                <button type="button" id="prevButton">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+            <!-- play btn -->
+                <button type="button" id="playBtn">
+                    <i id="play" class="fa-solid fa-circle-play"></i>
+                    <i id="pause" class="fa-solid fa-pause"></i>
+                </button>
+            <!-- next btn -->
+                <button type="button" id="nextBtn">
+                    <i class="fa-solid fa-forward-step" ></i>
+                </button>
+        </div>
+    </section>
+
+    <!-- explore section -->
+    <section class="explore">
+        <div class="header">
+            <h1>
+                Explore
+            </h1>
+            <div class="buttons-container">
+                <button class="lyrics active" id="lyricsBtn">Lyrics</button>
+                <button class="albums" id="albumsBtn">Other Albums</button>
+                <button class="related-artist" id="artistBtn">Related Artist</button>
+            </div>
+        </div>
+        <div class="display-container">
+            <!-- lyrics -->
+            <div class="lyrics-container" id="lyricsContainer"></div>
+            <!-- Other Albums -->
+            <div class="albums-container" id="albumContainer"></div>
+            <!-- Related Artist -->
+            <div class="artist-container" id="artistContainer"></div>
+        </div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
