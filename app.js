@@ -154,7 +154,7 @@ const fetchSpotify = async () => {
       q: "alan walker,the weeknd",
       type: "multi",
       offset: "0",
-      limit: "10",
+      limit: "5",
       numberOfTopResults: "10",
     },
      headers: {
